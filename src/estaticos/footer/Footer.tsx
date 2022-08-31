@@ -24,7 +24,7 @@ function Footer() {
                     <Box className='box2'>
                         <Box paddingTop={1}>
                             <Typography variant='subtitle2' align='center' gutterBottom className='textos'>
-                                &Copy; 2020 Copyright:
+                                &copy; 2020 Copyright:
                             </Typography>
                         </Box>
                         <Box>
