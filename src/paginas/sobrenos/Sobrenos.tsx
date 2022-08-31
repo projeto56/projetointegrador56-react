@@ -21,7 +21,7 @@ function Sobrenos(){
                     </Box>
 
                 </Grid>
-                <Grid item xs={6} className='imagem'>
+                <Grid item xs={6} className='imagem1'>
                     
                 </Grid>
             </Grid>
