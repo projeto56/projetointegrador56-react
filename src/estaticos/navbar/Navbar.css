@@ -1,0 +1,11 @@
+.cursor {
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}
+.bg-menu{
+    background:linear-gradient(36deg, rgb(0, 255, 55) 10%, blue 100%) ;
+}

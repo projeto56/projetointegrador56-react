@@ -1,0 +1,16 @@
+.text-decorator-none {
+    text-decoration: none;
+}
+
+.textos1 {
+    font-weight: bold !important;
+}
+
+.imagem {
+    background-image: url(https://img.freepik.com/free-vector/corporate-meeting-employees-cartoon-characters-discussing-business-strategy-planning-further-actions-brainstorming-formal-communication-seminar-concept-illustration_335657-2035.jpg?w=2000);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
