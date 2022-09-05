@@ -2,8 +2,8 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import User from '../../models/User';
 import { Grid, Box, Typography, TextField, Button } from '@mui/material';
-import { cadastroUsuario } from '../../service/Service';
-import './CadastroUsuario.css';
+import { cadastroUsuario } from '../services/Services';
+import './CadastroUsuario.css'
 
 
 function CadastroUsuario() {
@@ -15,26 +15,20 @@ function CadastroUsuario() {
             id: 0,
             nome: '',
             usuario: '',
-            login:'',
-            senha: '',
-            foto: ''
+            senha: ''
         })
-
     const [userResult, setUserResult] = useState<User>(
         {
             id: 0,
             nome: '',
             usuario: '',
-            login:'',
-            senha: '',
-            foto: ''
+            senha: ''
         })
     useEffect(() => {
         if (userResult.id !== 0) {
-            history('/login')
+            history('/home')
         }
     }, [userResult])
-
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
         setConfirmarSenha(e.target.value)
     }
@@ -45,8 +39,7 @@ function CadastroUsuario() {
             [e.target.name]: e.target.value
         })
     }
-
-    async function onSubmit(e:ChangeEvent<HTMLFormElement>) {
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha == user.senha) {
             cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
@@ -63,15 +56,10 @@ function CadastroUsuario() {
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit} >
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'></Typography>
-
                         <TextField value={user.nome} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth></TextField>
-
-                        <TextField value={user.login} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='login' label='login' variant='outlined' name='login' margin='normal' fullWidth></TextField>
-                        
-                        <TextField value={user.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='email' variant='outlined' name='usuario' margin='normal' fullWidth></TextField>
-
-                        <TextField value={user.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth type='password'></TextField>
-                        <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmaSenha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth type='password'></TextField>
+                        <TextField value={user.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth></TextField>
+                        <TextField value={user.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth></TextField>
+                        <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmaSenha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth></TextField>
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar' >
