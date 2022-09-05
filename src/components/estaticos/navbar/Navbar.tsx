@@ -9,13 +9,13 @@ function Navbar() {
             <AppBar position="static" className='bg-menu'>
                 <Toolbar variant="dense">
                     <Box display="flex" justifyContent="space-between" className='space'>
-                        <Link to='/home' className='text-decorator-none'>
+                         
                             <Box className='cursor'>
                                 <Typography variant="h4">
                                     Blog Informativo
                                 </Typography>
                             </Box>
-                        </Link>
+                        
 
                         <Box display="flex" justifyContent="space-evenly">
                             <Link to='/sobrenos' className='text-decorator-none'>

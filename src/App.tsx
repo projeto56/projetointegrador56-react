@@ -1,12 +1,14 @@
 import React from 'react';
-import Footer from './estaticos/footer/Footer';
+import Footer from './components/estaticos/footer/Footer';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
-import Navbar from './estaticos/navbar/Navbar';
+import Navbar from './components/estaticos/navbar/Navbar';
 import Sobrenos from "./paginas/sobrenos/Sobrenos";
-import Found from './paginas/NotFound/Found'
+import Found from './paginas/NotFound/Found';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path='/sobrenos' element={<Sobrenos/>}/>
+          <Route path='/cadastrousuario' element={<CadastroUsuario />} />
         </Routes>
       </div>
       <Footer />
