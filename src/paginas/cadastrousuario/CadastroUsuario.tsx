@@ -2,7 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import User from '../../models/User';
 import { Grid, Box, Typography, TextField, Button } from '@mui/material';
-import { cadastroUsuario } from '../services/Services';
+import { cadastroUsuario } from '../../service/Service';
 import './CadastroUsuario.css'
 
 
@@ -14,14 +14,18 @@ function CadastroUsuario() {
         {
             id: 0,
             nome: '',
+            login: '',
             usuario: '',
+            foto: '',
             senha: ''
         })
     const [userResult, setUserResult] = useState<User>(
         {
             id: 0,
             nome: '',
+            login: '',
             usuario: '',
+            foto: '',
             senha: ''
         })
     useEffect(() => {
@@ -50,16 +54,16 @@ function CadastroUsuario() {
     }
     return(
 
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid container direction='row' justifyContent='center' alignItems='center' p={10}>
             <Grid item xs={6} className='imagem2'></Grid>
-            <Grid item xs={6} alignItems='center'>
+            <Grid item xs={6} alignItems='center' className='boxCadastrar'>
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit} >
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'></Typography>
-                        <TextField value={user.nome} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth></TextField>
+                        <TextField value={user.nome} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='primeiro nome' variant='outlined' name='nome' margin='normal' fullWidth></TextField>
                         <TextField value={user.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth></TextField>
                         <TextField value={user.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth></TextField>
-                        <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmaSenha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth></TextField>
+                        <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmar senha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth></TextField>
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar' >
