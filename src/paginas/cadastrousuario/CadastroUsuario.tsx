@@ -30,7 +30,7 @@ function CadastroUsuario() {
         })
     useEffect(() => {
         if (userResult.id !== 0) {
-            history('/home')
+            history('/login')
         }
     }, [userResult])
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
@@ -60,16 +60,23 @@ function CadastroUsuario() {
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit} >
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'></Typography>
+
                         <TextField value={user.nome} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='primeiro nome' variant='outlined' name='nome' margin='normal' fullWidth></TextField>
-                        <TextField value={user.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth></TextField>
-                        <TextField value={user.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth></TextField>
-                        <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmar senha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth></TextField>
+
+                        <TextField value={user.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='e-mail' variant='outlined' name='usuario' margin='normal' fullWidth></TextField>
+
+                        <TextField value={user.login} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='login' label='login' variant='outlined' name='login' margin='normal' fullWidth></TextField>
+
+                        <TextField value={user.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth type='password'></TextField>
+
+                        <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmar senha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth type='password'></TextField>
+
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/login' className='text-decorator-none'>
+                             
                                 <Button variant='contained' color='secondary' className='btnCancelar' >
                                     Cancelar
                                 </Button>
-                            </Link>
+                            
                             <Button type='submit' variant='contained' color='primary'>
                                 Cadastrar
                             </Button>
