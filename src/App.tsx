@@ -1,8 +1,8 @@
 import React from 'react';
-import Footer from './estaticos/footer/Footer';
+import Footer from './components/estaticos/footer/Footer';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
-import Navbar from './estaticos/navbar/Navbar';
+import Navbar from './components/estaticos/navbar/Navbar';
 import Sobrenos from "./paginas/sobrenos/Sobrenos";
 import Found from './paginas/NotFound/Found'
 

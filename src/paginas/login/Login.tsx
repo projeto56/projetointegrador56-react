@@ -1,9 +1,50 @@
-import React from 'react';
+import React,{useState, useEffect, ChangeEvent} from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
+import useLocalStorage from 'react-use-localstorage';
+import { login } from '../../service/Service';
+import UserLogin from '../../models/UserLogin';
 
 function Login() {
+    let history = useNavigate();
+    const[token, setToken] = useLocalStorage('token');
+    const[userLogin, setUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            nome: '',
+            usuario: '',
+            senha: '',
+            token: '',
+            foto: ''  
+        })
+
+        function updateModel(e:ChangeEvent<HTMLInputElement>){
+            setUserLogin({
+                ...userLogin,
+                [e.target.name]: e.target.value
+            })
+        }
+
+        useEffect(()=>{
+            if(token != ''){
+                history('/home')
+            }
+        },[token])
+
+        async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+            e.preventDefault();
+            try{
+                await login(`/usuarios/logar`, userLogin, setToken )
+
+                alert('Usuário logado com sucesso!');
+            }catch(error){
+                alert('Dados do usuário inconsistentes. Erro ao logar!');
+            }
+            
+        }
+
+
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
