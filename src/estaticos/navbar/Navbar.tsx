@@ -11,7 +11,7 @@ function Navbar() {
                     <Box display="flex" justifyContent="space-between" className='space'>
                         <Link to='/home' className='text-decorator-none'>
                             <Box className='cursor'>
-                                <Typography variant="h4" color="inherit">
+                                <Typography variant="h4">
                                     Blog Informativo
                                 </Typography>
                             </Box>
@@ -20,14 +20,14 @@ function Navbar() {
                         <Box display="flex" justifyContent="space-evenly">
                             <Link to='/sobrenos' className='text-decorator-none'>
                                 <Box mx={1} className='cursor'>
-                                    <Typography variant="h5" color="black">
+                                    <Typography variant="h5" >
                                         Sobre-nós
                                     </Typography>
                                 </Box>
                             </Link>
                             <Link to='/login' className='text-decorator-none'>
                                 <Box mx={1} className='cursor'>
-                                    <Typography variant="h5" color="black">
+                                    <Typography variant="h5" >
                                         logout
                                     </Typography>
                                 </Box>

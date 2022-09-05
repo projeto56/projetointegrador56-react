@@ -1,14 +1,18 @@
 .cursor {
     cursor: pointer;
     color: white;
+    text-shadow:4px 4px 10px #000;
 }
 
 .text-decorator-none {
     text-decoration: none;
 }
 .bg-menu{
-    background:linear-gradient(to left, #a4068cc4 40%, rgba(32, 14, 99, 0.651) 70%) ;
+    background:#2C9BED !important;
 }
 .space{
     width: 100vw;
+}
+.fundoSobre{
+   
 }

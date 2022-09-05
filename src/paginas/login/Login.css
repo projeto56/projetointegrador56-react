@@ -9,8 +9,26 @@
 .imagem {
     background-image: url(https://img.freepik.com/free-vector/corporate-meeting-employees-cartoon-characters-discussing-business-strategy-planning-further-actions-brainstorming-formal-communication-seminar-concept-illustration_335657-2035.jpg?w=2000);
     background-repeat: no-repeat;
-    width: 100vh;
+    width: 45vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+    border-left: 2px solid #2C9BED;
+}
+
+.loginLeft {
+    background-color: #BEE3FD;
+    border: 2px solid #2C9BED;
+    padding: 0px 0px 0px 40px;
+}
+
+.loginBox {
+    background-color: #D8EFFF !important;
+    box-shadow: 0px 0px 8px;
+    border-radius: 8px;
+    height: 32rem;
+    margin-left: -20px;
+    margin-right: 20px;
+  
+
 }
