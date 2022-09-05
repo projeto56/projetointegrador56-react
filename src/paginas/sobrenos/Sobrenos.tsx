@@ -6,10 +6,10 @@ import './Sobrenos.css';
 function Sobrenos(){
     return(
         <>
-            <Grid container direction='row' justifyContent='center' alignItems='center' className='box'>
-                <Grid item alignItems='center' xs={6}>
+            <Grid container direction='row' justifyContent='center' alignItems='center' className='box sobreNos'>
+                <Grid item alignItems='center' xs={6} className='sobreNos-box'>
                     <Box paddingX={20}>
-                        <Typography variant='h3' gutterBottom>
+                        <Typography variant='h3' gutterBottom align='center'>
                             Sobre nós
                         </Typography>
                     </Box>
