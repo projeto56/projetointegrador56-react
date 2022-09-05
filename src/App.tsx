@@ -5,7 +5,7 @@ import Login from './paginas/login/Login';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Sobrenos from "./paginas/sobrenos/Sobrenos";
 import Found from './paginas/NotFound/Found';
-import CadastroUsuario from './paginas/cadastrousuario/CadastroUsuario';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
