@@ -7,5 +7,8 @@
     text-decoration: none;
 }
 .bg-menu{
-    background:linear-gradient(36deg, rgb(0, 255, 55) 10%, blue 100%) ;
+    background:linear-gradient(to left, #a4068cc4 40%, rgba(32, 14, 99, 0.651) 70%) ;
+}
+.space{
+    width: 100vw;
 }

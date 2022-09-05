@@ -1,0 +1,13 @@
+.imgError{
+    margin: auto;
+    height: 50vh;
+
+}
+.error404{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80vh;
+margin-top: -48px;
+margin-bottom: -50px;
+}

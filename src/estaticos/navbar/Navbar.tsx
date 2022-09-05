@@ -8,41 +8,32 @@ function Navbar() {
         <>
             <AppBar position="static" className='bg-menu'>
                 <Toolbar variant="dense">
-                    <Box className='cursor'>
-                        <Typography variant="h5" color="inherit">
-                            Blog Informativo
-                        </Typography>
-                    </Box>
-
-                    <Box display="flex" justifyContent="start">
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                home
-                            </Typography>
-                        </Box>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                postagens
-                            </Typography>
-                        </Box>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                temas
-                            </Typography>
-                        </Box>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                cadastrar tema
-                            </Typography>
-                        </Box>
-                        <Link to='/login' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="inherit">
-                                    logout
+                    <Box display="flex" justifyContent="space-between" className='space'>
+                        <Link to='/home' className='text-decorator-none'>
+                            <Box className='cursor'>
+                                <Typography variant="h4" color="inherit">
+                                    Blog Informativo
                                 </Typography>
                             </Box>
                         </Link>
 
+                        <Box display="flex" justifyContent="space-evenly">
+                            <Link to='/sobrenos' className='text-decorator-none'>
+                                <Box mx={1} className='cursor'>
+                                    <Typography variant="h5" color="black">
+                                        Sobre-nós
+                                    </Typography>
+                                </Box>
+                            </Link>
+                            <Link to='/login' className='text-decorator-none'>
+                                <Box mx={1} className='cursor'>
+                                    <Typography variant="h5" color="black">
+                                        logout
+                                    </Typography>
+                                </Box>
+                            </Link>
+
+                        </Box>
                     </Box>
 
                 </Toolbar>
