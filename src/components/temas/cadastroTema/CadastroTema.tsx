@@ -1,28 +1,31 @@
-import React , {useState, useEffect, ChangeEvent} from 'react'
+
+import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
-import { useNavigate, useParams } from 'react-router-dom'
+import {useNavigate, useParams } from 'react-router-dom'
 import './CadastroTema.css';
+import Tema from '../../../models/Tema';
+import { buscaId, post, put } from '../../../service/Service';
+import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
-import { post, put } from '../../../service/Service';
-
-
 
 
 function CadastroTema() {
-    let navigate = useNavigate();
+    let history = useNavigate();
     const { id } = useParams<{id: string}>();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
     const [tema, setTema] = useState<Tema>({
         id: 0,
-        descricao: ''
+        ong: ''
+
     })
 
     useEffect(() => {
         if (token == "") {
             alert("Você precisa estar logado")
-            navigate("/login")
+
+            history("/login")
     
         }
     }, [token])
@@ -34,8 +37,9 @@ function CadastroTema() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/tema/${id}`, setTema, {
-            headers: {
+    
+        buscaId(`/temas/${id}`, setTema, {
+        headers: {
               'Authorization': token
             }
           })
@@ -56,14 +60,15 @@ function CadastroTema() {
     
             if (id !== undefined) {
                 console.log(tema)
-                put(`/tema`, tema, setTema, {
+
+                put(`/temas`, tema, setTema, {
                     headers: {
                         'Authorization': token
                     }
                 })
                 alert('Tema atualizado com sucesso');
             } else {
-                post(`/tema`, tema, setTema, {
+                post(`/temas`, tema, setTema, {
                     headers: {
                         'Authorization': token
                     }
@@ -75,14 +80,16 @@ function CadastroTema() {
         }
     
         function back() {
-            navigate('/tema')
+
+            history('/temas')
+
         }
   
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <TextField value={tema.ong} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>
@@ -91,12 +98,6 @@ function CadastroTema() {
     )
 }
 
-export default CadastroTema;
 
-function useSelector<T, U>(arg0: (state: any) => any) {
-    throw new Error('Function not implemented.');
-}
-function buscaId(arg0: string, setTema: React.Dispatch<any>, arg2: { headers: { Authorization: void; }; }) {
-    throw new Error('Function not implemented.');
-}
+export default CadastroTema;
 
