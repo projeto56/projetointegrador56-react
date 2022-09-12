@@ -3,7 +3,7 @@ import { Card, CardActions, CardContent, Button, Typography} from '@material-ui/
 import { Box } from '@mui/material';
 import './DeletarTema.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import { deleteId } from '../../../service/Service';
+import { buscaId, deleteId } from '../../../service/Service';
 import Tema from '../../../models/Tema';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -67,7 +67,7 @@ function DeletarTema() {
                 Deseja deletar o Tema:
               </Typography>
               <Typography color="textSecondary">
-                {tema?.descricao}
+                {tema?.ong}
               </Typography>
             </Box>
           </CardContent>

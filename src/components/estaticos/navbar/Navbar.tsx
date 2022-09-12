@@ -15,7 +15,7 @@ function Navbar() {
                                     Blog Informativo
                                 </Typography>
                             </Box>
-                        
+
 
                         <Box display="flex" justifyContent="space-evenly">
                             <Link to='/sobrenos' className='text-decorator-none'>
