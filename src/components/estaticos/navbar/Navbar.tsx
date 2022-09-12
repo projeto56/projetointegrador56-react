@@ -5,6 +5,7 @@ import './Navbar.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
+import Logo from '../../../imagens/logo.png';
 
 function Navbar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -26,9 +27,8 @@ function Navbar() {
 
                 <Link to="/home" className="text-decorator-none">
                     <Box className='cursor'>
-                        <Typography variant="h4">
-                            Blog Informativo
-                        </Typography>
+                        <img src={Logo} width="150px" />
+                           
                     </Box>
                     </Link>
                     {/* <Link to="/home" className="text-decorator-none">
@@ -42,7 +42,7 @@ function Navbar() {
                     <Link to="/temas" className="text-decorator-none">
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                temas
+                                Temas
                             </Typography>
                         </Box>
                     </Link>
@@ -50,7 +50,7 @@ function Navbar() {
                     <Link to="formularioTema" className="text-decorator-none">
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                cadastrar tema
+                                Cadastrar tema
                             </Typography>
                         </Box>
                     </Link>
@@ -68,7 +68,7 @@ function Navbar() {
 
                         <Box mx={1} className='cursor' onClick={goLogout}>
                             <Typography variant="h5" >
-                                logout
+                                Logout
                             </Typography>
                         </Box>
 

@@ -6,6 +6,7 @@ import './Footer.css';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
+
 function Footer() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -18,7 +19,7 @@ function Footer() {
                 <Grid alignItems='center' item xs={12}>
                     <Box className='box1'>
                         <Box paddingTop={1} display='flex' alignItems='center' justifyContent='center' >
-                            <Typography variant='h5' align='center' gutterBottom className='textos'>
+                            <Typography variant='h6' align='center' gutterBottom className='textos'>
                                 Acompanhe nosso projeto
                             </Typography>
                         </Box>

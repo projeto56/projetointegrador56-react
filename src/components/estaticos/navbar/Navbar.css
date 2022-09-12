@@ -8,11 +8,8 @@
     text-decoration: none;
 }
 .bg-menu{
-    background:#2C9BED !important;
+    background: linear-gradient(50deg, whitesmoke 15%, #2C9BED 20%);
 }
 .space{
     width: 100vw;
-}
-.fundoSobre{
-   
 }
