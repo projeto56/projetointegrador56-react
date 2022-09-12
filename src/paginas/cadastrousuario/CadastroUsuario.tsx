@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import User from '../../models/User';
 import { Grid, Box, Typography, TextField, Button } from '@mui/material';
 import { cadastroUsuario } from '../../service/Service';
-// import './CadastroUsuario.css'
+import './CadastroUsuario.css'
 
 
 function CadastroUsuario() {
