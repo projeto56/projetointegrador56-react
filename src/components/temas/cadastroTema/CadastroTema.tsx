@@ -1,3 +1,4 @@
+
 import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
@@ -17,11 +18,13 @@ function CadastroTema() {
     const [tema, setTema] = useState<Tema>({
         id: 0,
         ong: ''
+
     })
 
     useEffect(() => {
         if (token == "") {
             alert("Você precisa estar logado")
+
             history("/login")
     
         }
@@ -34,8 +37,9 @@ function CadastroTema() {
     }, [id])
 
     async function findById(id: string) {
+    
         buscaId(`/temas/${id}`, setTema, {
-            headers: {
+        headers: {
               'Authorization': token
             }
           })
@@ -56,6 +60,7 @@ function CadastroTema() {
     
             if (id !== undefined) {
                 console.log(tema)
+
                 put(`/temas`, tema, setTema, {
                     headers: {
                         'Authorization': token
@@ -75,7 +80,9 @@ function CadastroTema() {
         }
     
         function back() {
+
             history('/temas')
+
         }
   
     return (
@@ -91,4 +98,6 @@ function CadastroTema() {
     )
 }
 
+
 export default CadastroTema;
+
