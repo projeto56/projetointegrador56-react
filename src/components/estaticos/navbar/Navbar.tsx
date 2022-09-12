@@ -8,9 +8,9 @@ import { addToken } from '../../../store/tokens/actions';
 
 function Navbar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state)=> state.tokens
+        (state) => state.tokens
     );
-    let usenavigate= useNavigate();
+    let usenavigate = useNavigate();
     const dispatch = useDispatch();
 
     function goLogout() {
@@ -19,62 +19,71 @@ function Navbar() {
         usenavigate('/login');
     }
     var navbarComponent;
-    if(token !== " "){
-        navbarComponent =  <AppBar position="static" className='bg-menu'>
-        <Toolbar variant="dense">
-            <Box display="flex" justifyContent="space-between" className='space'>
-                 
+    if (token !== "") {
+        navbarComponent = <AppBar position="static" className='bg-menu'>
+            <Toolbar variant="dense">
+                <Box display="flex" justifyContent="space-between" className='space'>
+
+                <Link to="/home" className="text-decorator-none">
                     <Box className='cursor'>
                         <Typography variant="h4">
                             Blog Informativo
                         </Typography>
                     </Box>
-                
-                    <Link to="/temas" className="text-decorator-none">
-                <Box mx={1} className='cursor'>
-                    <Typography variant="h6" color="inherit">
-                        temas
-                    </Typography>
-                </Box>
-                </Link>
-
-                <Link to="formularioTema" className="text-decorator-none">
-                <Box mx={1} className='cursor'>
-                    <Typography variant="h6" color="inherit">
-                        cadastrar tema
-                    </Typography>
-                </Box>
-                </Link>
-
-             
-
-                <Box display="flex" justifyContent="space-evenly">
-                    <Link to='/sobrenos' className='text-decorator-none'>
+                    </Link>
+                    {/* <Link to="/home" className="text-decorator-none">
                         <Box mx={1} className='cursor'>
-                            <Typography variant="h5" >
-                                Sobre-nós
+                            <Typography variant="h6" color="inherit">
+                                home
+                            </Typography>
+                        </Box>
+                    </Link> */}
+
+                    <Link to="/temas" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit">
+                                temas
                             </Typography>
                         </Box>
                     </Link>
-                   
+
+                    <Link to="formularioTema" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit">
+                                cadastrar tema
+                            </Typography>
+                        </Box>
+                    </Link>
+
+
+
+                    <Box display="flex" justifyContent="space-evenly">
+                        <Link to='/sobrenos' className='text-decorator-none'>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h5" >
+                                    Sobre-nós
+                                </Typography>
+                            </Box>
+                        </Link>
+
                         <Box mx={1} className='cursor' onClick={goLogout}>
                             <Typography variant="h5" >
                                 logout
                             </Typography>
                         </Box>
-                    
 
+
+                    </Box>
                 </Box>
-            </Box>
 
-        </Toolbar>
-    </AppBar>
+            </Toolbar>
+        </AppBar>
     }
 
     return (
         <>
-         
-             {navbarComponent}
+
+            {navbarComponent}
 
         </>
     )
