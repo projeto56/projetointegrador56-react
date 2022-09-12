@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
@@ -22,7 +21,7 @@ function CadastroTema() {
     })
 
     useEffect(() => {
-        if (token == "") {
+        if (token == " ") {
             alert("Você precisa estar logado")
 
             history("/login")

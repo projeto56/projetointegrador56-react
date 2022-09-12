@@ -19,7 +19,7 @@ function Navbar() {
         usenavigate('/login');
     }
     var navbarComponent;
-    if(token != ""){
+    if(token !== " "){
         navbarComponent =  <AppBar position="static" className='bg-menu'>
         <Toolbar variant="dense">
             <Box display="flex" justifyContent="space-between" className='space'>
@@ -30,6 +30,23 @@ function Navbar() {
                         </Typography>
                     </Box>
                 
+                    <Link to="/temas" className="text-decorator-none">
+                <Box mx={1} className='cursor'>
+                    <Typography variant="h6" color="inherit">
+                        temas
+                    </Typography>
+                </Box>
+                </Link>
+
+                <Link to="formularioTema" className="text-decorator-none">
+                <Box mx={1} className='cursor'>
+                    <Typography variant="h6" color="inherit">
+                        cadastrar tema
+                    </Typography>
+                </Box>
+                </Link>
+
+             
 
                 <Box display="flex" justifyContent="space-evenly">
                     <Link to='/sobrenos' className='text-decorator-none'>
@@ -39,13 +56,13 @@ function Navbar() {
                             </Typography>
                         </Box>
                     </Link>
-                    <Link to='/login' className='text-decorator-none'>
-                        <Box mx={1} className='cursor'>
+                   
+                        <Box mx={1} className='cursor' onClick={goLogout}>
                             <Typography variant="h5" >
                                 logout
                             </Typography>
                         </Box>
-                    </Link>
+                    
 
                 </Box>
             </Box>
@@ -56,42 +73,9 @@ function Navbar() {
 
     return (
         <>
-<<<<<<< HEAD
-            <AppBar position="static" className='bg-menu'>
-                <Toolbar variant="dense">
-                    <Box display="flex" justifyContent="space-between" className='space'>
-                         
-                            <Box className='cursor'>
-                                <Typography variant="h4">
-                                    Blog Informativo
-                                </Typography>
-                            </Box>
-
-
-                        <Box display="flex" justifyContent="space-evenly">
-                            <Link to='/sobrenos' className='text-decorator-none'>
-                                <Box mx={1} className='cursor'>
-                                    <Typography variant="h5" >
-                                        Sobre-nós
-                                    </Typography>
-                                </Box>
-                            </Link>
-                            <Link to='/login' className='text-decorator-none'>
-                                <Box mx={1} className='cursor'>
-                                    <Typography variant="h5" >
-                                        logout
-                                    </Typography>
-                                </Box>
-                            </Link>
-
-                        </Box>
-                    </Box>
-
-                </Toolbar>
-            </AppBar>
-=======
+         
              {navbarComponent}
->>>>>>> 4ce76b13ef861a354703bf898a073eb8dd5076c3
+
         </>
     )
 }
