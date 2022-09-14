@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Modal from '@mui/material/Modal';
 import { Button, Box } from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
-import CadastroPost from "../cadastroPostagem/CadastroPostagem";
+import CadastroPostagem from "../cadastroPostagem/CadastroPostagem";
 import './ModalPostagem.css';
 
 function getModalStyle() {
@@ -13,8 +13,8 @@ function getModalStyle() {
     return {
         top:`${top}%`,
         left:`${left}%`,
-        transform:` translate(-${top}%, -${left}%)`
-    }
+        transform:` translate(-${top}%, -${left}%)`,
+    };
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -51,7 +51,7 @@ function ModalPostagem () {
       
       </Box>
       
-      <CadastroPost/>
+      <CadastroPostagem/>
       
     </div>
   );

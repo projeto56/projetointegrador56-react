@@ -9,6 +9,7 @@ import { TokenState } from '../../store/tokens/tokensReducer';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+
 function Home() {
     let history = useNavigate();
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -41,12 +42,15 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                            <ModalPostagem/>
                         </Box>
                         <Button variant="outlined" className='botao'>Ver Postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} className='homeRight'>
-                    
+                </Grid>
+                <Grid item xs={12} >
+                  <TabPostagem/>  
                 </Grid>
             </Grid>
         </>

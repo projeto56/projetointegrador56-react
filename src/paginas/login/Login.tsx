@@ -18,9 +18,10 @@ function Login() {
             id: 0,
             nome: '',
             usuario: '',
+            foto: '',
             senha: '',
-            token: '',
-            foto: ''
+            token: ''
+           
         })
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
@@ -39,8 +40,9 @@ function Login() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
+        console.log(userLogin)
         try {
-            await login(`/usuarios/logar/`, userLogin, setToken)
+            await login(`/usuarios/logar`, userLogin, setToken)
 
             toast.success('Usuário logado com sucesso!', {
                 position: "top-right",
