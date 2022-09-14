@@ -61,6 +61,9 @@ function ListaPostagem() {
                   {postagem.titulo}
                 </Typography>
                 <Typography variant="body2" component="p">
+                  {postagem.subTitulo}
+                </Typography>
+                <Typography variant="body2" component="p">
                   {postagem.autor}
                 </Typography>
                 <Typography variant="body2" component="p">

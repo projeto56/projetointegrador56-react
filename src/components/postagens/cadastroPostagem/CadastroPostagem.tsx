@@ -140,6 +140,7 @@ function CadastroPostagem() {
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
                 <TextField value={postagem.autor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="autor" label="autor" name="autor" variant="outlined" margin="normal" fullWidth />
+                <TextField value={postagem.subTitulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="subTitulo" label="subTitulo" name="subTitulo" variant="outlined" margin="normal" fullWidth />
                 <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteudo" name="conteudo" variant="outlined" margin="normal" fullWidth />
                
 
