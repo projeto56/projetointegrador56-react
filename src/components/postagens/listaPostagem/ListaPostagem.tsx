@@ -61,16 +61,13 @@ function ListaPostagem() {
                   {postagem.titulo}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {postagem.subTitulo}
-                </Typography>
-                <Typography variant="body2" component="p">
                   {postagem.autor}
                 </Typography>
                 <Typography variant="body2" component="p">
                   {postagem.conteudo}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {postagem.tema?.ong}
+                 Tema: {postagem.tema?.ong}
                 </Typography>
               </CardContent>
               <CardActions>
