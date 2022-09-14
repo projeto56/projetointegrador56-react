@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-// import Postagem from '../../../models/Postagem';
-// import { busca } from '../../../services/Service';
+import Postagem from '../../../models/Postagem'; 
+import { busca } from '../../../service/Service';
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@mui/material';
 import './ListaPostagem.css';
 import { useNavigate } from 'react-router-dom';
@@ -61,10 +61,10 @@ function ListaPostagem() {
                   {post.titulo}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {post.texto}
+                  {post.conteudo}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {post.tema?.descricao}
+                  {post.tema?.ong}
                 </Typography>
               </CardContent>
               <CardActions>

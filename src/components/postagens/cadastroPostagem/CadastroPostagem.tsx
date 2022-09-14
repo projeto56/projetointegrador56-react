@@ -3,8 +3,8 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import './CadastroPostagem.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
-// import Postagem from '../../../models/Postagem';
-// import { busca, buscaId, post, put } from '../../../services/Service';
+import Postagem from '../../../models/Postagem';
+import { busca, buscaId, post, put } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
@@ -47,7 +47,7 @@ function CadastroPost() {
         conteudo:'',
         data: '',
         foto:'',
-        usuario:'',
+        usuario: null,
         tema: null
     })
 
@@ -140,7 +140,7 @@ function CadastroPost() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
+                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
 
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>

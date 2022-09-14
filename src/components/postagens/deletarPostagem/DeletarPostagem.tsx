@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {Typography, Button, Box, Card, CardActions, CardContent } from "@mui/material"
 import './DeletarPostagem.css';
 import { useNavigate, useParams } from 'react-router-dom';
-// import Postagem from '../../../models/Postagem';
-// import { buscaId, deleteId } from '../../../services/Service';
+import Postagem from '../../../models/Postagem';
+import { buscaId, deleteId } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
