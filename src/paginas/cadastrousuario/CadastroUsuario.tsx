@@ -72,11 +72,11 @@ function CadastroUsuario() {
                         <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmar senha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth type='password'></TextField>
 
                         <Box marginTop={2} textAlign='center'>
-                             
+                        <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar' >
                                     Cancelar
                                 </Button>
-                            
+                        </Link>
                             <Button type='submit' variant='contained' color='primary'>
                                 Cadastrar
                             </Button>

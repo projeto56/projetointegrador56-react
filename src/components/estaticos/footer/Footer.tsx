@@ -3,15 +3,23 @@ import { Grid, Typography } from '@material-ui/core';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Box } from '@mui/material';
 import './Footer.css';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+
 
 function Footer() {
-    return (
-        <>
-            <Grid container direction='row' justifyContent='center' alignItems='center'>
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    var footerComponent;
+
+    if(token !== ""){
+        footerComponent = 
+        <Grid container direction='row' justifyContent='center' alignItems='center'>
                 <Grid alignItems='center' item xs={12}>
                     <Box className='box1'>
                         <Box paddingTop={1} display='flex' alignItems='center' justifyContent='center' >
-                            <Typography variant='h5' align='center' gutterBottom className='textos'>
+                            <Typography variant='h6' align='center' gutterBottom className='textos'>
                                 Acompanhe nosso projeto
                             </Typography>
                         </Box>
@@ -34,6 +42,10 @@ function Footer() {
                     </Box>
                 </Grid>
             </Grid>
+    }
+    return (
+        <>
+            {footerComponent}
         </>
 
     )

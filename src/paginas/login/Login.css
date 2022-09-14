@@ -18,7 +18,8 @@
 
 .loginLeft {
     background-color: #BEE3FD;
-    border: 2px solid #2C9BED;
+    border-left: 2px solid #2C9BED;
+    border-right: 2px solid #2C9BED;
     padding: 0px 0px 0px 40px;
 }
 
