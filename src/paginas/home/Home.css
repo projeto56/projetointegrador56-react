@@ -2,7 +2,10 @@
     /* background-color: #BEE3FD; */
     background-color: white;
     color: black !important;
-    padding: 0px 8px 0px 16px;
+}
+
+.caixa02{
+ 
 }
 
 .titulo {
@@ -14,7 +17,7 @@
 
 .botao {
     border-color:#000 !important;
-    background-color: #3F51B5 !important;
+    background-color: #1193f0 !important;
     color: white !important;
 }
 .homeLeft{
@@ -22,11 +25,10 @@
     box-shadow: 0px 0px 8px;
     border-radius: 8px;
     height: 25rem;
+    margin: 60px auto !important;
 }
 .homeRight{
-    background-image:url(https://i.imgur.com/H88yIo2.png);
-    height: 500px;
-    width: 500px;
+    /* background-image: url(../../imagens/participacao-politica.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

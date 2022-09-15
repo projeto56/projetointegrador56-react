@@ -54,21 +54,28 @@ function ListaPostagem() {
           <Box m={2} >
             <Card variant="outlined">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Postagens
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  {postagem.titulo}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {postagem.autor}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {postagem.conteudo}
-                </Typography>
-                <Typography variant="body2" component="p">
-                 Tema: {postagem.tema?.ong}
-                </Typography>
+                <div className="conteudo-card"> 
+                  <img src={postagem.foto} alt="" width='500px' className='imagemFoto'/>
+                  <div className="conteudo-texto">
+                    
+                     <Typography variant="h5" component="h2">
+                      {postagem.titulo}
+                    </Typography>
+                    <Typography variant="body2" component="p"><strong>
+                       Tema: </strong>{postagem.tema?.ong}
+                     </Typography>
+                    
+                    <Typography variant="body2" component="p">
+                      {postagem.conteudo}
+                     </Typography>
+                     
+                     <Typography variant="body2" component="p"><strong>
+                     Autor: </strong>{postagem.autor}
+                    </Typography>
+                  </div>
+                
+                
+                </div>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
