@@ -1,11 +1,23 @@
 .titulo{
     font-weight: normal;
-    margin-right: 10px !important;
-    color: white !important;
  }
 
  .faixa-postagem{
    background-color: #2C9BED !important;
    width: 100%;
    
+ }
+
+ .label{
+   margin-right:10px !important;
+ }
+
+ .posts{
+   width: 1000px;
+   margin: 0 auto;
+ }
+
+ .texto-sobre{
+   width: 850px;
+   margin: 0 auto;
  }

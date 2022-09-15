@@ -143,6 +143,8 @@ function CadastroPostagem() {
 
                 <TextField value={postagem.autor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="autor" label="autor" name="autor" variant="outlined" margin="normal" fullWidth />
 
+                <TextField value={postagem.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="foto" label="Insira a URL da foto (opcional)" name="foto" variant="outlined" margin="normal" fullWidth />
+
                 <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="Mínimo 100 caracteres" multiline rows={5} name="conteudo" variant="outlined" margin="normal" fullWidth />
                
 
