@@ -32,55 +32,56 @@ function Navbar() {
     var navbarComponent;
     if (token !== "") {
         navbarComponent = <AppBar position="static" className='bg-menu'>
-            <Toolbar variant="dense">
-                <Box display="flex" justifyContent="space-between" className='space'>
-
-                <Link to="/home" className="text-decorator-none">
-                    <Box className='cursor'>
-                        <img src={Logo} width="150px" />
-                           
-                    </Box>
-                    </Link>
-                     <Link to="/posts" className="text-decorator-none">
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                postagens
-                            </Typography>
+            <Toolbar variant="dense" className='itens'>
+            <Link to="/home" className="text-decorator-none">
+                        <Box className='cursor'>
+                            <img src={Logo} width="150px" />
+                            
                         </Box>
-                    </Link> 
 
-                    <Link to="/temas" className="text-decorator-none">
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                Temas
-                            </Typography>
-                        </Box>
-                    </Link>
-
-                    <Link to="formularioTema" className="text-decorator-none">
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                Cadastrar tema
-                            </Typography>
-                        </Box>
-                    </Link>
-
-
-
-                    <Box display="flex" justifyContent="space-evenly">
-                        <Link to='/sobrenos' className='text-decorator-none'>
+                        </Link>
+            <Box display="flex" justifyContent="flex-end" className='space'>
+                
+                        <Link to="/posts" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
-                                <Typography variant="h5" >
-                                    Sobre-nós
+                                <Typography variant="h6" color="inherit">
+                                    Postagens
+                                </Typography>
+                            </Box>
+                        </Link> 
+
+                        <Link to="/temas" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit">
+                                    Temas
                                 </Typography>
                             </Box>
                         </Link>
 
-                        <Box mx={1} className='cursor' onClick={goLogout}>
-                            <Typography variant="h5" >
-                                Logout
-                            </Typography>
-                        </Box>
+                        <Link to="formularioTema" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit">
+                                    Cadastrar tema
+                                </Typography>
+                            </Box>
+                        </Link>
+
+
+
+                        <Box display="flex" justifyContent="space-evenly">
+                            <Link to='/sobrenos' className='text-decorator-none'>
+                                <Box mx={1} className='cursor'>
+                                    <Typography variant="h6" >
+                                        Sobre-nós
+                                    </Typography>
+                                </Box>
+                            </Link>
+
+                            <Box mx={1} className='cursor' onClick={goLogout}>
+                                <Typography variant="h6" >
+                                    Logout
+                                </Typography>
+                            </Box>
 
 
                     </Box>
