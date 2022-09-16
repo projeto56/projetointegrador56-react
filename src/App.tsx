@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
 import CadastroPostagem from './components/postagens/cadastroPostagem/CadastroPostagem';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
+import Perfil from './paginas/perfil/Perfil'
 
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
           <Route path="/formularioPostagem" element={<CadastroPostagem />} />
           <Route path="/formularioPostagem/:id" element={<CadastroPostagem />} />
           <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+          <Route path='/perfil' element={<Perfil />}/>
+        
         </Routes>
       </div>
       <Footer />

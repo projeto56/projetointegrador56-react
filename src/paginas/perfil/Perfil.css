@@ -3,14 +3,11 @@
     border-radius: 32px 0;
     padding: 20px;
     margin: 20px;
-    background-color: #3f51b5;
+    background-color: #2C9BED !important;
 }
 
 .card-container-imagem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 40px;
+    
 }
 
 .card-container-info{
