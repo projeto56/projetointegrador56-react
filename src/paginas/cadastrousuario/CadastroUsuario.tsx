@@ -86,17 +86,19 @@ function CadastroUsuario() {
 
                         <TextField value={user.login} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='login' label='login' variant='outlined' name='login' margin='normal' fullWidth></TextField>
 
+                        <TextField value={user.foto} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='URL da foto (opcional)' variant='outlined' name='foto' margin='normal' fullWidth></TextField>
+
                         <TextField value={user.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth type='password'></TextField>
 
                         <TextField value={confirmarSenha} onChange={(e:ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)}  id='confirmarSenha' label='confirmar senha' variant='outlined' name='confirmaSenha' margin='normal' fullWidth type='password'></TextField>
 
                         <Box marginTop={2} textAlign='center'>
                         <Link to='/login' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' className='btnCancelar' >
+                                <Button variant='contained' color='secondary' className='btnCancelar btn-sec' >
                                     Cancelar
                                 </Button>
                         </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' color='primary' className='btn'>
                                 Cadastrar
                             </Button>
                         </Box>
