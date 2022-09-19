@@ -6,6 +6,7 @@ import { TokenState} from '../../store/tokens/tokensReducer'
 import User from '../../models/User'
 import { buscaId } from '../../service/Service'
 import './Perfil.css'
+import FotoPerfil from '../../imagens/FotoPerfil.png'
 
 function Perfil() {
 
@@ -57,7 +58,7 @@ function Perfil() {
             <Box className='card-container-info'>
                 <Box className='card-container-imagem'>
                  <img className='card-imagem'
-                src="https://e7.pngegg.com/pngimages/250/541/png-clipart-computer-application-icon-computer-technology-green-actions-im-msn-computer-wallpaper-microsoft.png" alt='' width="150px" height="150px"/>
+                src={FotoPerfil} alt='' width="150px" height="150px"/>
                 </Box>
                 <Box>
                     <h1>{ user.nome }</h1>
