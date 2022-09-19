@@ -17,8 +17,14 @@
 }
 
 .imagemFoto{
-    width: 300px;
+    width: 300px !important;
+    height: 200px !important;
     
+}
+
+.btn-sec{
+    background-color: whitesmoke !important;
+    color: black !important;
 }
 
 

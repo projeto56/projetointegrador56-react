@@ -37,9 +37,9 @@ function Home() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="caixa" >
-                <Grid alignItems="center" item xs={5} className='homeLeft '>
-                    <Box paddingX={20} className='bg-color' >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem vindo(a)!</Typography>
+                <Grid alignItems="center" item xs={5} className='homeLeft glass'>
+                    <Box paddingX={20} className='bg-color ' >
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" >Seja bem vindo(a)!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">

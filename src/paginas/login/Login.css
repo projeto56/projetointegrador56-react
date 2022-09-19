@@ -13,24 +13,28 @@
     min-height: 100vh;
     background-size: cover;
     background-position: center;
-    border-left: 2px solid #2C9BED;
+    /* border-left: 2px solid #2C9BED; */
 }
 
 .loginLeft {
-    background-color: #BEE3FD;
-    border-left: 2px solid #2C9BED;
-    border-right: 2px solid #2C9BED;
+    background: linear-gradient(90deg, #66a1cca6 0%,white 51%); 
     padding: 0px 0px 0px 40px;
 }
 
 .loginBox {
     background-color: #fff !important;
-    box-shadow: 0px 0px 8px;
     border-radius: 8px;
     height: 32rem;
     margin-left: -20px;
     margin-right: 20px;
     padding-top:3rem;
-  
+}
 
+.efeito-vidro {
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 10px solid rgba(253, 253, 253, 0.18);
+    width: 270px;
 }

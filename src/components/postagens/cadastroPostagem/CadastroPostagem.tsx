@@ -109,7 +109,8 @@ function CadastroPostagem() {
                 theme: "colored",
                 progress: undefined,
             });
-        } else {
+        } else { 
+            console.log(postagem)
             post(`/postagens`, postagem, setPostagem, {
                 headers: {
                     'Authorization': token
@@ -165,7 +166,7 @@ function CadastroPostagem() {
                         }
                     </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" color="primary" className='btn'>
                         Finalizar
                     </Button>
                 </FormControl>

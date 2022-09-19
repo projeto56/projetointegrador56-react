@@ -5,7 +5,7 @@ import './Login.css';
 import { login } from '../../service/Service';
 import UserLogin from '../../models/UserLogin';
 import { useDispatch } from 'react-redux';
-import { addToken } from '../../store/tokens/actions';
+import { addId, addToken } from '../../store/tokens/actions';
 import { toast } from 'react-toastify';
 
 function Login() {
@@ -24,6 +24,15 @@ function Login() {
            
         })
 
+        const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+            id: 0,
+            nome: '',
+            usuario: '',
+            senha: '',
+            token: '',
+            foto: ""
+        })
+
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
             ...userLogin,
@@ -38,11 +47,23 @@ function Login() {
         }
     }, [token])
 
+    useEffect(() => {
+        if (respUserLogin.token !== "") {
+
+            console.log("Token: " + respUserLogin.token)
+            console.log("ID: " + respUserLogin.id)
+            
+            dispatch(addToken(respUserLogin.token))
+            dispatch(addId(respUserLogin.id.toString()))    
+            history('/home')
+        }
+    }, [respUserLogin.token])
+
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
-        console.log(userLogin)
         try {
-            await login(`/usuarios/logar`, userLogin, setToken)
+            await login(`/usuarios/logar`, userLogin, setRespUserLogin)
 
             toast.success('Usuário logado com sucesso!', {
                 position: "top-right",
@@ -73,9 +94,9 @@ function Login() {
     return (
 
         <Grid container direction='row' justifyContent='center' alignItems='center' className='loginLeft'>
-            <Grid alignItems='center' xs={6} className='loginBox'>
-                <Box paddingX={20}>
-                    <form onSubmit={onSubmit}>
+            <Grid alignItems='center' xs={6} className=''>
+                <Box paddingX={20} className='efeito-vidro'>
+                    <form onSubmit={onSubmit} >
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
 
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='e-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
@@ -88,7 +109,7 @@ function Login() {
 
                         <Box marginTop={2} textAlign='center'>
 
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' color='primary' className="btn">
                                 Logar
                             </Button>
 
