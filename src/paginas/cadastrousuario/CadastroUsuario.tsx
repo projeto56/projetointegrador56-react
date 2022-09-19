@@ -86,7 +86,7 @@ function CadastroUsuario() {
 
                         <TextField value={user.login} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='login' label='login' variant='outlined' name='login' margin='normal' fullWidth></TextField>
 
-                        <TextField value={user.foto} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='URL da foto (opcional)' variant='outlined' name='foto' margin='normal' fullWidth></TextField>
+                        {/*<TextField value={user.foto} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='URL da foto (opcional)' variant='outlined' name='foto' margin='normal' fullWidth></TextField>*/}
 
                         <TextField value={user.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth type='password'></TextField>
 

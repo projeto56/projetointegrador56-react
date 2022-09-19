@@ -64,15 +64,17 @@ function Perfil() {
                     <hr />
                     <p>{user.login}</p>
                 </Box>
-
+                <h4>
+                    Descrição 
+                </h4>
                 <p className='card-container-texto'>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam accusantium totam incidunt architecto maiores, perferendis eius. Tempora ullam magni dolore voluptatibus, quidem sunt tempore distinctio ut aliquam modi aliquid officiis.
-                    Assumenda voluptatibus, animi pariatur voluptatum magnam ullam aspernatur optio suscipit incidunt dolor modi quos aperiam. Quam possimus rerum iste nobis quas porro unde sequi, sed nisi labore est voluptas corrupti.
-                    Deleniti officiis sint perspiciatis nisi iste, voluptate sunt asperiores dolor sapiente non corporis omnis voluptatem soluta. Nulla odio alias aperiam, magnam eaque assumenda tempora! Inventore odit iure unde placeat iste.
+                Nós do grupo 1, propomos a construir um blog onde será publicado links de instituições do âmbito político 
+                para auxiliar as pessoas com informações atualizadas e verídicas 
+                e também com espaço para divulgação de diversas ongs com trabalho relevante para o desenvolvimento sustentável.
                 </p>
 
                 <p className='card-container-texto'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur tempore en
+                   
                 </p>
             </Box>
         </Box>
