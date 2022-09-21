@@ -7,6 +7,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import Logo from '../../../imagens/logo.png';
 import {toast} from 'react-toastify';
+import BtnLogout from '../../../imagens/btn-logout.png';
 
 function Navbar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -78,9 +79,7 @@ function Navbar() {
                             </Link>
 
                             <Box mx={1} className='cursor' onClick={goLogout}>
-                                <Typography variant="h6" >
-                                    Logout
-                                </Typography>
+                               <img src={BtnLogout} alt="" className="btn-logout"/>
                             </Box>
 
 
