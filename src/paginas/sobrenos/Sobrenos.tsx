@@ -6,13 +6,14 @@ import ImgSobre from "../../imagens/sobre-nos.png";
 import './Sobrenos.css';
 
 
+
 function Sobrenos(){
     return(
         <>
             <Grid container direction='row' justifyContent='center' alignItems='center' className='caixa-sobre'>
                 <Grid item alignItems='center' xs={6} className='caixa-sn'>
-                    <Box paddingX={10} className="titulo-sn">
-                        <Typography variant='h2' gutterBottom >
+                    <Box paddingX={10} >
+                        <Typography variant='h2' gutterBottom className="titulo-sn">
                          
                             <img src={ImgLogo} alt="" /> Sobre nós
                         
@@ -30,7 +31,7 @@ function Sobrenos(){
 
                 </Grid>
                 <Grid item xs={6} className='bx-sobrenos' >
-                 <div className="imagem-sobre"><img src={ImgSobre} alt="" /></div>
+                <img src={ImgSobre} alt="" />
                 </Grid>
             </Grid>
         

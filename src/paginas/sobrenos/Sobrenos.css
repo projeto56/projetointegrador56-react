@@ -11,7 +11,25 @@
 }
 
 .titulo-sn{
+    font-family: 'Fredoka One', cursive !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+}
+
+.texto{
+    font-family: 'Fredoka One', cursive !important;
+    font-size: 1.3em;
+}
+
+.texto strong{
+    color:#0793f7;
+}
+
+
+.bx-sobrenos{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 50px;
 }
