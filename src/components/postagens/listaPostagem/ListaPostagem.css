@@ -28,4 +28,13 @@
 }
 
 
+.pintarBtn{
+    background-color:  rgba(255, 204, 1) !important;
+    color: rgba(0, 0, 0, 0.753) !important;
 
+}
+
+.pintarBtn2 {
+    background-color: #0793f7 !important;
+    color:  whitesmoke !important;
+}

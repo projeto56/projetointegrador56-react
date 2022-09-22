@@ -6,7 +6,7 @@ import { TokenState} from '../../store/tokens/tokensReducer'
 import User from '../../models/User'
 import { buscaId } from '../../service/Service'
 import './Perfil.css'
-import FotoPerfil from '../../imagens/FotoPerfil.png'
+import FotoPerfil from '../../imagens/logo-favicon.png'
 
 function Perfil() {
 
@@ -63,7 +63,6 @@ function Perfil() {
                 <Box>
                     <h1>{ user.nome }</h1>
                     <hr />
-                    <p>{user.login}</p>
                 </Box>
                 <h4>
                     Descrição 

@@ -87,16 +87,16 @@ function ListaPostagem() {
                     </CardContent>
                     <CardActions className='caixa-btn'>
                       <Box display="flex" justifyContent="center" mb={1.5}>
-                        <Link to={`/formularioPostagem/${postagem.id}`} className="text-decorator-none" >
+                        <Link to={`/formularioPostagem/${postagem.id}`} className="text-decorator-none " >
                           <Box mx={1}>
-                            <Button variant="contained" className="marginLeft btn-sec" size='small' color="primary" >
+                            <Button variant="contained" className="marginLeft pintarBtn " size='small'  >
                               atualizar
                             </Button>
                           </Box>
                         </Link>
-                        <Link to={`/deletarPostagem/${postagem.id}`} className="text-decorator-none">
+                        <Link to={`/deletarPostagem/${postagem.id}`} className="text-decorator-none ">
                           <Box mx={1}>
-                            <Button variant="contained" className='btn' size='small' color="secondary">
+                            <Button variant="contained" className="pintarBtn2" size='small' >
                               deletar
                             </Button>
                           </Box>
