@@ -1,34 +1,37 @@
 import React from 'react';
-import { Typography, Grid, Button } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import {Box} from "@mui/material";
+import ImgLogo from "../../imagens/logo-favicon.png";
+import ImgSobre from "../../imagens/sobre-nos.png";
 import './Sobrenos.css';
+
+
 
 function Sobrenos(){
     return(
         <>
-            <Grid container direction='row' justifyContent='center' alignItems='center' className='box sobreNos'>
-                <Grid item alignItems='center' xs={6} className='sobreNos-box'>
-                    <Box paddingX={20}>
-                        <Typography variant='h4' gutterBottom align='center'>
-                            Sobre nós
+            <Grid container direction='row' justifyContent='center' alignItems='center' className='caixa-sobre'>
+                <Grid item alignItems='center' xs={6} className='caixa-sn'>
+                    <Box paddingX={10} >
+                        <Typography variant='h2' gutterBottom className="titulo-sn">
+                         
+                            <img src={ImgLogo} alt="" /> Sobre nós
+                        
                         </Typography>
                     </Box>
                     <Box>
                         <Typography className="texto">
-                        Nós do grupo 1, nos propomos a construir um blog onde será publicado links de instituições do âmbito político para auxiliar as pessoas com informações atualizadas e verídicas e também com espaço para divulgação de diversas ongs com trabalho relevante para o desenvolvimento sustentável.
-                        </Typography>
+                            O <strong>Informa aê</strong> foi idealizado a partir de um projeto no bootcamp Pessoa Desenvolvedora Java,  e construído com o intuito de fornecer conhecimento politico e social para todo o Brasil. </Typography>
                         <Typography className="texto">
-                        Nosso site te o intuito de informar as pessoas sobre as principais atribuições das instituições públicas do Brasil, descrever o papel de cada cargo político na administração pública e divulgar ongs que trabalham para reduzir violências.
-                        </Typography>
+                            Aqui você encontra informações verídicas e de fontes confiáveis, além de poder conhecer e divulgar o trabalho de ongs que atuam contra os diversos tipos de violência que existem na nossa sociedade.</Typography>
                         <Typography className="texto">
-                        Buscamos assim, ajudar a população com informações relevantes sobre a politica nacional e projetos sociais: área de atuação, formas de financiamento, exposição dos sites institucionais.
-                        </Typography>
+                            Nosso blog também é um espaço de troca, onde além de adquirir informações, os usuários também podem criar postagens para contribuir com a rede de conhecimento.</Typography>
                         
                     </Box>
 
                 </Grid>
-                <Grid item xs={6} className='imagem1'>
-                    
+                <Grid item xs={6} className='bx-sobrenos' >
+                <img src={ImgSobre} alt="" />
                 </Grid>
             </Grid>
         

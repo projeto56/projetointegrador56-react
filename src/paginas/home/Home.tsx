@@ -8,7 +8,9 @@ import { useSelector} from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Imagem from '../../imagens/participacao-politica.png'
+import Imagem from '../../imagens/logo.png'
+
+
 
 
 
@@ -36,25 +38,25 @@ function Home() {
   }, [token]) 
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className="caixa" >
-                <Grid alignItems="center" item xs={5} className='homeLeft glass'>
+           <Grid container direction="row" justifyContent="center" alignItems="center">
+                <Grid className="caixa-home" alignItems="center" item xs={12}>
                     <Box paddingX={20} className='bg-color ' >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" >Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
+                        <img src={Imagem} alt="" className='imagem-logo-home' />
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Aqui você encontra informações confiáveis sobre política e causas sociais e ainda pode contribuir divulgando projetos sociais.</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                            <ModalPostagem/>
+                        <Box marginRight={10} >
+                            <ModalPostagem />
                         </Box>
                         <Link to='/posts' className='text-decorator-none'> 
-                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                            <Button variant="outlined" className='botao fonte-fredoka'>Ver Postagens</Button>
                         </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} className='homeRight'>
-                    <img src={Imagem} alt="" />
+                   
                 </Grid>
-                <Grid item xs={12} >
+                <Grid item xs={12} className="fundo-postagens" >
                   <TabPostagem/>  
                 </Grid>
             </Grid>

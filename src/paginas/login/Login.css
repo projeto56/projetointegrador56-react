@@ -1,40 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 .text-decorator-none {
     text-decoration: none;
 }
 
 .textos1 {
-    font-weight: bold !important;
+    
 }
 
-.imagem {
-    background-image: url(https://img.freepik.com/free-vector/corporate-meeting-employees-cartoon-characters-discussing-business-strategy-planning-further-actions-brainstorming-formal-communication-seminar-concept-illustration_335657-2035.jpg?w=2000);
+.fundo-home {
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4)), 
+    url(https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
-    width: 45vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
-    /* border-left: 2px solid #2C9BED; */
 }
 
-.loginLeft {
-    background: linear-gradient(90deg, #66a1cca6 0%,white 51%); 
-    padding: 0px 0px 0px 40px;
+.texto-principal{
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    padding: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold !important;
 }
 
-.loginBox {
-    background-color: #fff !important;
-    border-radius: 8px;
-    height: 32rem;
-    margin-left: -20px;
-    margin-right: 20px;
-    padding-top:3rem;
+.caixa-cadastro{
+    background-color: white;
+    height: 500px;
+    width: 410px;
+    border-radius: 30px;
+    
 }
 
-.efeito-vidro {
-    background: rgba(255, 255, 255, 0.199);
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
-    border-radius: 10px;
-    border: 10px solid rgba(253, 253, 253, 0.18);
-    width: 270px;
+.caixa-cadastro form img{
+    width: 120px;
+    margin: 0 auto;
+    padding-left: 150px;
+    padding-top: 20px;
 }
+
+.inputs{
+    margin: 10px;
+    width: 390px;
+}
+

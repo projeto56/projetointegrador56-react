@@ -7,6 +7,7 @@ import UserLogin from '../../models/UserLogin';
 import { useDispatch } from 'react-redux';
 import { addId, addToken } from '../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import ImagemLogo from '../../imagens/logo-favicon.png'
 
 function Login() {
     let history = useNavigate();
@@ -92,18 +93,21 @@ function Login() {
 
 
     return (
-
-        <Grid container direction='row' justifyContent='center' alignItems='center' className='loginLeft'>
-            <Grid alignItems='center' xs={6} className=''>
-                <Box paddingX={20} className='efeito-vidro'>
+            
+        <Grid container direction='row' justifyContent='center' alignItems='center' className='fundo-home' >
+            <Grid xs={7} className="texto-principal">
+                <h1>O poder de Transformar o mundo atráves do diálogo e do conhecimento!</h1>
+                
+            </Grid>
+            <Grid alignItems='center' xs={5} >
+                <Box className="caixa-cadastro"  >
                     <form onSubmit={onSubmit} >
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
+                        <img src={ImagemLogo} alt="" />
 
-                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='e-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
-
-
-                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-
+                        <div className="inputs">
+                            <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='e-mail' variant='outlined' name='usuario' margin='normal'  className="inputs" />
+                            <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth className="inputs"/>
+                        </div>
 
 
 
@@ -115,19 +119,17 @@ function Login() {
 
                         </Box>
                     </form>
-                    <Box display='flex' justifyContent='Center' marginTop={2} >
-                        <Box marginRight={1}>
+                    <Box display='flex' justifyContent='Center' marginTop={2} className='caixa-btncadastro' >
+                        <Box marginRight={1} className="">
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
                         <Link to='/cadastrousuario'>
-                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
+                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1 text-decorator-none'>Cadastre-se</Typography>
                         </Link>
                     </Box>
                 </Box>
             </Grid>
-            <Grid xs={6} className='imagem'>
-
-            </Grid>
+            
         </Grid>
     )
 }

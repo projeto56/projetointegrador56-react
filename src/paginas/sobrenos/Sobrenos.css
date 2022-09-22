@@ -1,29 +1,35 @@
- .imagem1 {
-    
-    margin-top: 20px !important;
-     background: url(https://www.justicaeleitoral.jus.br/titulo-eleitoral/assets/img/hand.fb366227.png);
-     background-repeat: no-repeat;
-     width: 100vh;
-     min-height: 100vh;
-     background-size: cover;
-     background-position: center;
- }
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
- .sobreNos {
-     background-color: #BEE3FD;
-     border: 2px solid #2C9BED;
-     padding: 0px 20px;
- }
+.caixa-sobre{
+    font-family: 'Fredoka One', cursive !important; 
+}
 
- .texto {
-     padding: 10px 20px;
- }
+.caixa-sn{
+    font-family: 'Fredoka One', cursive !important;
+    padding: 20px;
+    text-align: center;
+}
 
- .sobreNos-box {
-    margin-top: -6rem !important;
-     padding-top: 20px;
-     background-color: #fff !important;
-     box-shadow: 0px 0px 8px ;
-     height: 25rem;
-     border-radius: 8px;
- }
+.titulo-sn{
+    font-family: 'Fredoka One', cursive !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.texto{
+    font-family: 'Fredoka One', cursive !important;
+    font-size: 1.3em;
+}
+
+.texto strong{
+    color:#0793f7;
+}
+
+
+.bx-sobrenos{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 50px;
+}
