@@ -58,11 +58,10 @@ function Perfil() {
             <Box className='card-container-info'>
                 <Box className='card-container-imagem'>
                  <img className='card-imagem'
-                src={FotoPerfil} alt='' width="150px" height="150px"/>
+                src={user.nome} alt='' width="150px" height="150px"/>
                 </Box>
                 <Box>
-                    <h1>{ user.nome }</h1>
-                    <hr />
+                    <h1>{ user.login }</h1>
                 </Box>
                 <h4>
                     Descrição 
