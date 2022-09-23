@@ -70,13 +70,13 @@ function Navbar() {
 
 
                         <Box display="flex" justifyContent="space-evenly">
-                            <Link to='/sobrenos' className='text-decorator-none'>
+                            {/* <Link to='/sobrenos' className='text-decorator-none'>
                                 <Box mx={1} className='cursor'>
                                     <Typography variant="h6" >
                                         Sobre-nós
                                     </Typography>
                                 </Box>
-                            </Link>
+                            </Link> */}
 
                             <Box mx={1} className='cursor' onClick={goLogout}>
                                <img src={BtnLogout} alt="" className="btn-logout"/>
