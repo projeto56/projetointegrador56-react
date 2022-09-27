@@ -36,3 +36,13 @@
     background-color: white;
 }
 
+.bg-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imagem-logo-home{
+    width: 300px;
+}

@@ -42,7 +42,7 @@ function CadastroPostagem() {
     const [postagem, setPostagem] = useState<Postagem>({
         id: 0,
         titulo: '',
-        subTitulo:'teste',
+        subTitulo:'',
         autor:'',
         conteudo:'',
         data: '',
@@ -143,10 +143,12 @@ function CadastroPostagem() {
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
 
                 <TextField value={postagem.autor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="autor" label="autor" name="autor" variant="outlined" margin="normal" fullWidth />
+                
+                <TextField value={postagem.autor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="subTitulo" label="fonte" name="subTitulo" variant="outlined" margin="normal" fullWidth />
 
                 <TextField value={postagem.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="foto" label="Insira a URL da foto (opcional)" name="foto" variant="outlined" margin="normal" fullWidth />
 
-                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="Mínimo 100 caracteres" multiline rows={5} name="conteudo" variant="outlined" margin="normal" fullWidth />
+                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="Mínimo 100 caracteres" multiline rows={2} name="conteudo" variant="outlined" margin="normal" fullWidth />
                
 
                 <FormControl >
