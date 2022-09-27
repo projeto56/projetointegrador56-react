@@ -63,7 +63,7 @@ function ListaPostagem() {
                   <Card variant="outlined">
                     <CardContent>
                       <div className="conteudo-card">
-                        <img src={postagem.foto} alt="" width='400px' className='imagemFoto'/>
+                        <img src={postagem.foto} alt=""  className='imagemFoto'/>
                         <div className="conteudo-texto">
                 
                           <Typography variant="h5" component="h2">
@@ -73,12 +73,16 @@ function ListaPostagem() {
                             Tema: </strong>{postagem.tema?.ong}
                           </Typography>
                 
-                          <Typography variant="body2" component="p">
+                          <Typography variant="body2"  component="p">
                             {postagem.conteudo}
                           </Typography>
                 
                           <Typography variant="body2" component="p"><strong>
                           Autor: </strong>{postagem.autor}
+                          </Typography>
+                          
+                          <Typography variant="body2" component="p"><strong>
+                           Fonte: </strong>{postagem.subTitulo}
                           </Typography>
                         </div>
                 
